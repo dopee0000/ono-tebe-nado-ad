@@ -15,12 +15,3 @@
   font-weight: bold;
   font-display: swap;
 }
-
-@font-face {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url(./Inter_18pt_ExtraLight.woff2) format("woff2"),
-         url(./Inter_18pt_ExtraLight.woff) format("woff");
-}
