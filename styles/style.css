@@ -80,22 +80,22 @@
   letter-spacing: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* расстояние между строками */
+  gap: 20px;
 }
 
 .aligned-text_left {
   align-self: flex-start;
-  margin-top: auto; /* прижимает к низу своего пространства */
+  margin-top: auto;
 }
 
 .aligned-text_center {
   align-self: center;
-  margin: auto 0; /* центрирует по вертикали */
+  margin: auto 0;
 }
 
 .aligned-text_right {
   align-self: flex-end;
-  margin-bottom: auto; /* прижимает к верху своего пространства */
+  margin-bottom: auto;
 }
 
 .overlay {
@@ -120,7 +120,6 @@
   color: white;
   text-transform: uppercase;
   word-spacing: 18px;
-  font-weight: 100;
 }
 
 .bet-button {
@@ -135,40 +134,43 @@
 }
 
 .lots {
-  padding: 180px 50px 0 50px; /* Отступ сверху как в макете */
-  width: 1100px; /* По ширине контейнера */
+  padding: 180px 0 0 0;
+  width: 1052px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .lots__heading {
   font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 27px;
-  padding-left: 40px; /* Чтобы заголовок был под карточками */
+  padding-left: 40px;
   font-weight: 700;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .lots__card-list {
-  list-style: none; /* Убираем маркеры */
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px; /* Расстояние между карточками */
-  margin-bottom: 30px; /* Отступ до ссылки "посмотреть больше" */
+  gap: 25px;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
-
 .lots__card-list-item {
-  flex: 1;
-  min-width: 0;
-  width: 430px;
-  min-height: 450px;
+  width: 334px;
+  height: 596px;
+  flex-shrink: 0;
 }
 
 .card-link {
   text-decoration: none;
   display: block;
   height: 100%;
+  width: 100%;
 }
 
 .card {
@@ -177,26 +179,28 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
   padding: 50px 40px;
   background-size: cover;
   background-position: center;
   color: white;
+  box-sizing: border-box;
 }
 
 .card .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный */
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
 .card__content {
-  position: relative; /* Чтобы был поверх .overlay */
+  position: relative;
   z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Заголовок сверху, текст снизу */
+  justify-content: space-between;
 }
 
 .card__title {
@@ -205,14 +209,19 @@
   text-transform: uppercase;
   text-decoration: underline;
   text-underline-offset: 3px;
-  margin-bottom: 30px;
+  text-decoration-thickness: 1px;
   font-weight: 700;
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .card__text {
   font-size: 20px;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0;
+  max-width: 100%;
 }
 
 .card_type_film {
@@ -232,11 +241,194 @@
   margin-left: 40px;
   text-decoration: underline;
   text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
   color: #000;
   display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: lowercase;
+}
 
+.about {
+  display: flex;
+  width: 1052px;
+  margin: 180px auto 0;
+  padding: 0 40px;
+  gap: 50px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.about__column-logo {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.about__logo {
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.about__column-text {
+  flex: 1;
+  padding-left: 10px;
+  min-width: 0;
+  margin-top: 100px;
+}
+
+.about__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 100px;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about__text-paragraph {
+  font-size: 20px;
 }
 
 .footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: start;
+  width: 1100px;
+  margin: 180px auto 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
 
+.footer address {
+  font-style: normal;
+  line-height: 1.35;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer address a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  line-height: 1.35;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: start;
+  width: 1100px;
+  margin: 180px auto 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+
+.footer address {
+  font-style: normal;
+  line-height: 1.35;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-self: start;
+}
+
+.footer address a.footer__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.footer address a {
+  color: #000;
+  display: block;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.footer nav {
+  justify-self: center;
+}
+
+.footer nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.footer nav ul li {
+  font-size: 18px;
+  width: auto;
+}
+
+.footer nav ul li a {
+  color: #000;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.footer nav ul li a.footer__link_no-underline {
+  text-decoration: none;
+}
+
+.footer .cocial {
+  justify-self: end;
+}
+
+.footer .cocial ul {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cocial__item {
+  width: 48px;
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cocial__item_yt {
+  background-image: url(../images/yt.svg);
+}
+
+.cocial__item_vk {
+  background-image: url(../images/vk.svg);
+}
+
+.cocial__item_pinterest {
+  background-image: url(../images/pinterest.svg);
 }
